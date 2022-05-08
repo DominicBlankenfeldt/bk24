@@ -72,7 +72,7 @@
     </div>
     <div
       class="contacts d-flex justify-content-center pt-2 pb-2"
-      style="border-bottom: solid 1px #d5322c"
+      style="border-bottom: solid 1px #d5322c; font-weight: bold"
     >
       <div style="color: #d5322c">
         <svg
@@ -108,7 +108,7 @@
       </div>
     </div>
     <div class="logo d-flex justify-content-end pt-2 px-4">
-      <img alt="Logo" src="../assets/logo.png" style="height: 12vh" />
+      <img alt="Logo" src="../assets/logo.png" style="height: 10vh" />
     </div>
   </div>
 </template>
@@ -157,7 +157,6 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  font-family: Lora, sans-serif;
 }
 
 p {
@@ -171,6 +170,7 @@ p {
 
   &:checked {
     & ~ .menu {
+      backdrop-filter: blur(1px);
       opacity: 1;
       visibility: visible;
 
