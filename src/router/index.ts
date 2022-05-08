@@ -1,6 +1,10 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
-import About from "../views/About.vue";
+import Team from "../views/Team.vue";
+import Shop from "../views/Shop.vue";
+import Service from "../views/Service.vue";
+import Datenschutz from "../views/Datenschutz.vue";
+import Impressum from "../views/Impressum.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -9,9 +13,29 @@ const routes: Array<RouteRecordRaw> = [
     component: Home,
   },
   {
-    path: "/about",
-    name: "About",
-    component: About,
+    path: "/team",
+    name: "Team",
+    component: Team,
+  },
+  {
+    path: "/shop",
+    name: "Shop",
+    component: Shop,
+  },
+  {
+    path: "/service",
+    name: "Service",
+    component: Service,
+  },
+  {
+    path: "/impressum",
+    name: "Impressum",
+    component: Impressum,
+  },
+  {
+    path: "/datenschutz",
+    name: "Datenschutz",
+    component: Datenschutz,
   },
 ];
 

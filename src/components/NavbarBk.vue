@@ -108,7 +108,9 @@
       </div>
     </div>
     <div class="logo d-flex justify-content-end pt-2 px-4">
-      <img alt="Logo" src="../assets/logo.png" style="height: 10vh" />
+      <router-link to="/"
+        ><img alt="Logo" src="../assets/logo.png" style="height: 10vh"
+      /></router-link>
     </div>
   </div>
 </template>

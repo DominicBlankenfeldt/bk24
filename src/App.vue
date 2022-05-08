@@ -2,9 +2,9 @@
   <navbar />
   <router-view />
   <div class="footer d-flex justify-content-center">
-    <router-link to="/service">Impressum</router-link>
+    <router-link to="/impressum">Impressum</router-link>
     &nbsp; | &nbsp;
-    <router-link to="/service">Datenschutz</router-link>
+    <router-link to="/datenschutz">Datenschutz</router-link>
   </div>
 </template>
 
@@ -34,6 +34,12 @@ body {
   font-weight: bold;
   a {
     color: #d5322c;
+    &:hover {
+      color: #e66f6a;
+    }
+    &.router-link-exact-active {
+      color: white;
+    }
   }
 }
 </style>
