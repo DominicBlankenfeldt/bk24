@@ -24,12 +24,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bk24/img/zubhör.f89719e8.jpg"
   },
   {
-    "revision": "af84d2c96e078a93d75cdeecc6782738",
+    "revision": "12967c85dae9628df3502ab294db2c77",
     "url": "/bk24/index.html"
   },
   {
-    "revision": "f972c5648739673935ad",
-    "url": "/bk24/js/app.65f372d4.js"
+    "revision": "bbb1065d2c26e82e8860",
+    "url": "/bk24/js/app.f07d0784.js"
   },
   {
     "revision": "e1f67faa7275f28a2a6f",
