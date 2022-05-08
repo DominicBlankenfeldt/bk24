@@ -12,7 +12,7 @@
         Gerne vermessen wir Ihre Fenster & Türen persönlich und helfen bei der
         passenden Auswahl.<br />
         Ob PVC, Aluminium oder Holz – wir bieten für jeden Geschmack und Stil
-        das Richtige.
+        das Passende.
       </div>
     </div>
   </div>
