@@ -109,7 +109,7 @@
     </div>
     <div class="logo d-flex justify-content-end pt-2 px-4">
       <router-link to="/"
-        ><img alt="Logo" src="../assets/logo.png" style="height: 10vh"
+        ><img alt="Logo" src="../assets/logo.png" style="height: 8vh"
       /></router-link>
     </div>
   </div>
@@ -289,7 +289,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #d6d6d66b;
+  background: #ffffffe3;
   opacity: 0;
   overflow-x: hidden;
   visibility: hidden;
@@ -309,6 +309,7 @@ p {
 
     @include sp-layout {
       flex-direction: column;
+      margin-top: 10vh;
     }
 
     &-item {
@@ -384,6 +385,7 @@ p {
 
       @include sp-layout {
         width: 40vw;
+        height: 18vh;
         margin: 0 12px 12px 0;
       }
 
@@ -430,6 +432,9 @@ a {
   font-weight: bold;
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.79);
   &:hover {
+    color: white;
+  }
+  &:active {
     color: white;
   }
 }

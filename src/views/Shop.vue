@@ -1,15 +1,19 @@
 <template>
   <div class="shop row d-flex justify-content-center m-auto mt-4">
-    <h1>This is a shop page</h1>
+    <shopnav />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import shopnav from "../components/ShopNav.vue";
 
 export default defineComponent({
   setup() {
     return;
+  },
+  components: {
+    shopnav,
   },
 });
 </script>
