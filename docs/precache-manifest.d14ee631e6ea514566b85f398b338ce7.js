@@ -24,16 +24,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bk24/img/zubhör.f89719e8.jpg"
   },
   {
-    "revision": "12967c85dae9628df3502ab294db2c77",
+    "revision": "458e4034f84fb045cb123f8577db5ad9",
     "url": "/bk24/index.html"
   },
   {
-    "revision": "bbb1065d2c26e82e8860",
-    "url": "/bk24/js/app.f07d0784.js"
+    "revision": "768f40acb5e2603e7a0b",
+    "url": "/bk24/js/app.6f30c119.js"
   },
   {
-    "revision": "e1f67faa7275f28a2a6f",
-    "url": "/bk24/js/chunk-vendors.1308d255.js"
+    "revision": "5212e62e152617fb79fe",
+    "url": "/bk24/js/chunk-vendors.7e853a72.js"
   },
   {
     "revision": "26f0926cc9eae15794d2bc68ff959a04",
