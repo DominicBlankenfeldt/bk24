@@ -1,16 +1,16 @@
 {
-  "name": "bk24",
-  "short_name": "bk24",
+  "name": "Baukönig24 App",
+  "short_name": "BK24 App",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000000",
   "theme_color": "#4DBA87",
+  "description": "App für Baukönig24 Website",
   "icons": [
     {
       "src": "./img/icons/logo.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "background_color": "#000000"
+  ]
 }
