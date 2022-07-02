@@ -1,116 +1,106 @@
 <template>
-  <div>
-    <input type="checkbox" id="burger-toggle" />
-    <label for="burger-toggle" class="burger-menu">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </label>
-    <div class="menu">
-      <div class="menu-inner">
-        <ul class="menu-nav">
-          <li class="menu-nav-item">
-            <a class="menu-nav-link" href="#"
-              ><span>
-                <router-link to="/" @click="closeNavbar()">Home</router-link>
-              </span></a
-            >
-          </li>
-          <li class="menu-nav-item">
-            <a class="menu-nav-link" href="#"
-              ><span>
-                <router-link to="/shop" @click="closeNavbar()"
-                  >Shop</router-link
-                >
-              </span></a
-            >
-          </li>
-          <li class="menu-nav-item">
-            <a class="menu-nav-link" href="#"
-              ><span>
-                <router-link to="/service" @click="closeNavbar()"
-                  >Service</router-link
-                >
-              </span></a
-            >
-          </li>
-          <li class="menu-nav-item">
-            <a class="menu-nav-link" href="#"
-              ><span>
-                <router-link to="/team" @click="closeNavbar()"
-                  >Team</router-link
-                >
-              </span></a
-            >
-          </li>
-        </ul>
-        <div class="gallery">
-          <div class="images">
-            <a class="image-link" href="#" @click="closeNavbar()">
-              <div class="image" data-label="Fenster">
-                <img src="../assets/fenster.jpg" alt="" style="width: 100%" />
+  <div class="Navbar gx-0 d-flex row align-items-end">
+    <div class="col-2 d-flex justify-content-evenly">
+      <router-link
+        to="/"
+        @click="isActive = ''"
+        :class="{ choosed: isActive === 'home' }"
+        style="border-bottom: #d5322c solid 4px"
+        ><img src="../assets/logo.png" alt="" style="height: 10vh"
+      /></router-link>
+    </div>
+    <div class="navigation col-9 justify-content-evenly">
+      <div class="row justify-content-evenly gx-0">
+        <div class="trust-nav col-12 gx-0 row mb-2 p-1">
+          <div class="col-3 d-flex">
+            <img src="../assets/telephone.png" alt="" style="height: 4vh" />
+            <div>
+              <b>&nbsp;+49 1234 567890</b> <br />
+              <div style="font-size: small">
+                &nbsp; &nbsp;Mo. - Fr. 08 - 19 Uhr
               </div>
-            </a>
-            <a class="image-link" href="#" @click="closeNavbar()">
-              <div class="image" data-label="Türen">
-                <img src="../assets/tür.jpg" alt="" />
+            </div>
+          </div>
+          <div class="col-3 d-flex">
+            <img src="../assets/saver.png" alt="" style="height: 4vh" />
+            <div>
+              <b>&nbsp;Umweltbewusst</b>
+              <div style="font-size: small">
+                &nbsp;Nachhaltig Dank neuester Standards
               </div>
-            </a>
-            <a class="image-link" href="#" @click="closeNavbar()">
-              <div class="image" data-label="Baustoffe">
-                <img src="../assets/baustoffe.jpg" alt="" />
+            </div>
+          </div>
+          <div class="col-3 d-flex">
+            <img
+              src="../assets/customer-service.png"
+              alt=""
+              style="height: 4vh"
+            />
+            <div>
+              <b>&nbsp;Nummer 1 im Service</b>
+              <div style="font-size: small">
+                &nbsp;vereinbaren Sie Hausbesuche
               </div>
-            </a>
-            <a class="image-link" href="#" @click="closeNavbar()">
-              <div class="image" data-label="Zubehör">
-                <img src="../assets/zubhör.jpg" alt="" />
+            </div>
+          </div>
+          <div class="col-3 d-flex">
+            <img src="../assets/trusted.png" alt="" style="height: 5vh" />
+            <div>
+              <b>&nbsp;Trusted Partner</b>
+              <div style="font-size: small">
+                &nbsp;Autorisierter Vertriebspartner
               </div>
-            </a>
+            </div>
           </div>
         </div>
+        <router-link
+          to="/fenster"
+          @click="isActive = 'Fenster'"
+          :class="{ choosed: isActive === 'Fenster' }"
+          >Fenster</router-link
+        ><router-link
+          to="/tueren"
+          @click="isActive = 'Türen'"
+          :class="{ choosed: isActive === 'Türen' }"
+          >Türen</router-link
+        ><router-link
+          to="/baustoffe"
+          @click="isActive = 'Rollladen'"
+          :class="{ choosed: isActive === 'Rollladen' }"
+          >Rollladen</router-link
+        >
+        <router-link
+          to="/baustoffe"
+          @click="isActive = 'Zubehör'"
+          :class="{ choosed: isActive === 'Zubehör' }"
+          >Zubehör</router-link
+        >
+        <router-link
+          to="/baustoffe"
+          @click="isActive = 'Baustoffe'"
+          :class="{ choosed: isActive === 'Baustoffe' }"
+          >Baustoffe</router-link
+        >
       </div>
     </div>
-    <div
-      class="contacts d-flex justify-content-center pt-2 pb-2"
-      style="border-bottom: solid 1px #d5322c; font-weight: bold"
-    >
-      <div style="color: #d5322c">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-telephone-fill"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
-          />
-        </svg>
-        04347 / 901 03 47
+    <div class="nav-end col-1">
+      <div class="d-flex justify-content-evenly mb-2" style="color: #d5322c">
+        <router-link to="/fenster"
+          ><img src="../assets/user.png" alt="" style="height: 3vh" />
+        </router-link>
+        <router-link to="/fenster"
+          ><img src="../assets/enter.png" alt="" style="height: 3vh" />
+        </router-link>
       </div>
-      &nbsp; &nbsp; &nbsp; &nbsp;
-      <div style="color: #d5322c">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          fill="currentColor"
-          class="bi bi-envelope-fill"
-          viewBox="0 0 16 16"
+      <div class="d-flex justify-content-center" style="color: #d5322c">
+        <router-link to="/fenster"
+          >Warenkorb
+          <div class="cart-circle d-flex justify-content-center">
+            {{ cart.length }}
+          </div></router-link
         >
-          <path
-            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
-          />
-        </svg>
-        info@baukoenig24.de
       </div>
-    </div>
-    <div class="logo d-flex justify-content-end pt-2 px-4">
-      <router-link to="/"
-        ><img alt="Logo" src="../assets/logo.png" style="height: 8vh"
-      /></router-link>
+      <div class="d-flex justify-content-center">0,00 €</div>
     </div>
   </div>
 </template>
@@ -118,324 +108,57 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 export default defineComponent({
+  data() {
+    return {
+      isActive: "",
+      cart: [],
+    };
+  },
   setup() {
     return;
   },
-  methods: {
-    closeNavbar() {
-      var inputs = document.getElementsByTagName("input");
-      for (var i = 0; i < inputs.length; i++) {
-        if (inputs[i].type == "checkbox") {
-          if (inputs[i].checked == true) {
-            inputs[i].checked = false;
-          } else {
-            return;
-          }
-        }
-      }
-    },
-  },
+  methods: {},
 });
 </script>
 
 <style scoped lang="scss">
-@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+.Navbar {
+  background: #eeeeee;
+  border-bottom: solid 1px #dbdbdb;
 
-@mixin sp-layout {
-  @media screen and (max-width: 750px) {
-    @content;
+  .navigation {
+    a {
+      width: 10rem;
+    }
+    border-left: solid 1px #dbdbdb;
+    border-right: solid 1px #dbdbdb;
   }
-}
-
-@mixin pc-layout {
-  @media screen and (min-width: 751px) {
-    @content;
-  }
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-#burger-toggle {
-  position: absolute;
-  appearance: none;
-  opacity: 0;
-
-  &:checked {
-    & ~ .menu {
-      backdrop-filter: blur(1px);
-      opacity: 1;
-      visibility: visible;
-
-      .menu-nav-link span div,
-      img,
-      .title p {
-        transform: translateY(0);
-        transition: 1.2s 0.1s cubic-bezier(0.35, 0, 0.07, 1);
-      }
-
-      .image-link {
-        @for $i from 1 through 4 {
-          &:nth-child(#{$i}) img {
-            transition-delay: 0.1s + 0.08s * $i;
-          }
-        }
-      }
-    }
-
-    & ~ .burger-menu {
-      .line {
-        &::after {
-          transform: translateX(0);
-        }
-
-        &:nth-child(1) {
-          transform: translateY(calc(var(--burger-menu-radius) / 5))
-            rotate(45deg);
-        }
-
-        &:nth-child(2) {
-          transform: scaleX(0);
-        }
-
-        &:nth-child(3) {
-          transform: translateY(calc(var(--burger-menu-radius) / -5))
-            rotate(-45deg);
-        }
-      }
-    }
-  }
-}
-
-.burger-menu {
-  --burger-menu-radius: 4em;
-
-  position: fixed;
-  top: 5vh;
-  left: 5vw;
-  z-index: 100;
-  display: block;
-  width: var(--burger-menu-radius);
-  height: var(--burger-menu-radius);
-  outline: none;
-  cursor: pointer;
-  &:hover {
-    background: rgba(255, 255, 255, 0.178);
-    border-radius: 5px;
-  }
-  .line {
-    position: absolute;
-    left: 25%;
-    width: 50%;
-    height: 3px;
-    background: #d5322c;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: 0.5s;
-
-    &:nth-child(1) {
-      top: 30%;
-    }
-
-    &:nth-child(2) {
-      top: 50%;
-    }
-
-    &:nth-child(3) {
-      top: 70%;
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: var(--primary-color-darker);
-      transform: translateX(-100%);
-      transition: 0.25s;
-    }
-
-    @for $i from 2 through 3 {
-      &:nth-child(#{$i})::after {
-        transition-delay: 0.1s * ($i - 1);
-      }
-    }
-  }
-
-  &:hover {
-    .line::after {
-      transform: translateX(0);
-    }
-  }
-}
-
-.menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #ffffffe3;
-  opacity: 0;
-  overflow-x: hidden;
-  visibility: hidden;
-  transition: 0.3s;
-
-  @include sp-layout {
-    display: block;
-  }
-
-  &-nav {
+  a {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    list-style-type: none;
-
-    @include sp-layout {
-      flex-direction: column;
-      margin-top: 10vh;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    &:hover {
+      color: #d5322c;
     }
-
-    &-item {
-      flex: 1;
+    &.choosed {
+      box-shadow: inset 0 -4px 0 #d5322c;
+      transform: scale(1.2);
     }
-
-    &-link {
-      position: relative;
-      display: inline-flex;
-      font-size: 2rem;
+    &.router-link-exact-active {
       color: white;
-      text-decoration: none;
-
-      span {
-        overflow: hidden;
-
-        div {
-          transform: translateY(102%);
-        }
-      }
-
-      &::after {
-        position: absolute;
-        content: "";
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background: var(--primary-color);
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 0.5s;
-      }
-
-      &:hover::after {
-        transform: scaleX(1);
-        transform-origin: left;
-      }
-    }
-  }
-
-  .gallery {
-    margin-top: 60px;
-    text-align: center;
-  }
-
-  .title {
-    font-size: 24px;
-    color: white;
-    overflow: hidden;
-
-    p {
-      font-size: 12px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      transform: translateY(102%);
-    }
-  }
-
-  .images {
-    margin-top: 36px;
-    display: flex;
-    flex-wrap: wrap;
-
-    @include sp-layout {
-      justify-content: center;
-    }
-
-    .image-link {
-      width: 15vw;
-      margin: 0 12px;
-      overflow: hidden;
-
-      @include sp-layout {
-        width: 40vw;
-        height: 18vh;
-        margin: 0 12px 12px 0;
-      }
-
-      .image {
-        position: relative;
-        transition: 0.6s;
-
-        &::before {
-          position: absolute;
-          content: attr(data-label);
-          top: 0;
-          left: 0;
-          z-index: 1;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          height: 100%;
-          color: white;
-          background: rgba(0, 0, 0, 0.6);
-          opacity: 0;
-          transition: 0.4s;
-        }
-      }
-
-      &:hover .image {
-        transform: scale(1.2);
-
-        &::before {
-          opacity: 1;
-        }
-      }
-    }
-
-    img {
-      height: 250px;
-      transform: translateY(102%);
     }
   }
 }
-a {
-  text-decoration: none;
-  color: #d5312c;
-  font-weight: bold;
-  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.79);
-  &:hover {
-    color: white;
-  }
-  &:active {
-    color: white;
-  }
+.trust-nav {
+  background-color: rgb(219, 219, 219);
+}
+.cart-circle {
+  background-color: #d5322c;
+  border-radius: 50%;
+  width: 31px;
+  color: white;
 }
 </style>
