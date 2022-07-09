@@ -13,16 +13,20 @@
       <div class="row justify-content-evenly gx-0">
         <div class="trust-nav col-12 gx-0 row mb-2 p-1">
           <div class="col-3 d-flex">
-            <img src="../assets/telephone.png" alt="" style="height: 4vh" />
+            <img
+              src="../assets/icons/telephone.png"
+              alt=""
+              style="height: 4vh"
+            />
             <div>
-              <b>&nbsp;+49 1234 567890</b> <br />
+              <b>&nbsp;04347 / 901 03 47</b> <br />
               <div style="font-size: small">
                 &nbsp; &nbsp;Mo. - Fr. 08 - 19 Uhr
               </div>
             </div>
           </div>
           <div class="col-3 d-flex">
-            <img src="../assets/saver.png" alt="" style="height: 4vh" />
+            <img src="../assets/icons/saver.png" alt="" style="height: 4vh" />
             <div>
               <b>&nbsp;Umweltbewusst</b>
               <div style="font-size: small">
@@ -32,7 +36,7 @@
           </div>
           <div class="col-3 d-flex">
             <img
-              src="../assets/customer-service.png"
+              src="../assets/icons/customer-service.png"
               alt=""
               style="height: 4vh"
             />
@@ -44,7 +48,7 @@
             </div>
           </div>
           <div class="col-3 d-flex">
-            <img src="../assets/trusted.png" alt="" style="height: 5vh" />
+            <img src="../assets/seals/trusted.png" alt="" style="height: 5vh" />
             <div>
               <b>&nbsp;Trusted Partner</b>
               <div style="font-size: small">
@@ -64,13 +68,13 @@
           :class="{ choosed: isActive === 'Türen' }"
           >Türen</router-link
         ><router-link
-          to="/baustoffe"
+          to="/rollladen"
           @click="isActive = 'Rollladen'"
           :class="{ choosed: isActive === 'Rollladen' }"
           >Rollladen</router-link
         >
         <router-link
-          to="/baustoffe"
+          to="/zubehoer"
           @click="isActive = 'Zubehör'"
           :class="{ choosed: isActive === 'Zubehör' }"
           >Zubehör</router-link
@@ -86,14 +90,14 @@
     <div class="nav-end col-1">
       <div class="d-flex justify-content-evenly mb-2" style="color: #d5322c">
         <router-link to="/fenster"
-          ><img src="../assets/user.png" alt="" style="height: 3vh" />
+          ><img src="../assets/icons/user.png" alt="" style="height: 3vh" />
         </router-link>
         <router-link to="/fenster"
-          ><img src="../assets/enter.png" alt="" style="height: 3vh" />
+          ><img src="../assets/icons/enter.png" alt="" style="height: 3vh" />
         </router-link>
       </div>
       <div class="d-flex justify-content-center" style="color: #d5322c">
-        <router-link to="/fenster"
+        <router-link to="/cart" @click="isActive = ''"
           >Warenkorb
           <div class="cart-circle d-flex justify-content-center">
             {{ cart.length }}
@@ -148,7 +152,7 @@ export default defineComponent({
       transform: scale(1.2);
     }
     &.router-link-exact-active {
-      color: white;
+      color: black;
     }
   }
 }

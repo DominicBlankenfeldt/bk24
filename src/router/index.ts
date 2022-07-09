@@ -1,8 +1,10 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
-import Team from "../views/Team.vue";
-import Shop from "../views/Shop.vue";
-import Service from "../views/Service.vue";
+import Fenster from "../views/Fenster.vue";
+import Tueren from "../views/Tueren.vue";
+import Rollladen from "../views/Rollladen.vue";
+import Extras from "../views/Extras.vue";
+import Baustoffe from "../views/Baustoffe.vue";
 import Datenschutz from "../views/Datenschutz.vue";
 import Impressum from "../views/Impressum.vue";
 
@@ -13,19 +15,29 @@ const routes: Array<RouteRecordRaw> = [
     component: Home,
   },
   {
-    path: "/team",
-    name: "Team",
-    component: Team,
+    path: "/fenster",
+    name: "Fenster",
+    component: Fenster,
   },
   {
-    path: "/shop",
-    name: "Shop",
-    component: Shop,
+    path: "/tueren",
+    name: "Tueren",
+    component: Tueren,
   },
   {
-    path: "/service",
-    name: "Service",
-    component: Service,
+    path: "/rollladen",
+    name: "Rollladen",
+    component: Rollladen,
+  },
+  {
+    path: "/zubehoer",
+    name: "Zubehoer",
+    component: Extras,
+  },
+  {
+    path: "/baustoffe",
+    name: "Baustoffe",
+    component: Baustoffe,
   },
   {
     path: "/impressum",
