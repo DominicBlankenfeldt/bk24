@@ -1,11 +1,6 @@
 <template>
   <navbar />
   <router-view />
-  <!-- <div class="footer d-flex justify-content-center">
-    <router-link to="/impressum">Impressum</router-link>
-    &nbsp; | &nbsp;
-    <router-link to="/datenschutz">Datenschutz</router-link>
-  </div> -->
 </template>
 
 <script>

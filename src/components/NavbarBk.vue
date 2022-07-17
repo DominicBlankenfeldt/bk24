@@ -97,10 +97,10 @@
         </router-link>
       </div>
       <div class="d-flex justify-content-center" style="color: #d5322c">
-        <router-link to="/cart" @click="isActive = ''"
+        <router-link to="/warenkorb" @click="isActive = ''"
           >Warenkorb
           <div class="cart-circle d-flex justify-content-center">
-            {{ cart.length }}
+            {{ cartAmount }}
           </div></router-link
         >
       </div>
@@ -110,18 +110,42 @@
 </template>
 
 <script lang="ts">
+import { Item } from "@/types";
 import { defineComponent } from "vue";
 export default defineComponent({
+  computed: {
+    cartAmount(): Item[] {
+      if (!localStorage.getItem("lastCart")) {
+        localStorage.setItem("lastCart", JSON.stringify(this.cart));
+        let HelperCart = JSON.parse(localStorage.getItem("lastCart")!);
+        return HelperCart.length;
+      }
+      let HelperCart = JSON.parse(localStorage.getItem("lastCart")!);
+      return HelperCart.length;
+    },
+  },
   data() {
     return {
       isActive: "",
-      cart: [],
+      cart: [] as Item[],
     };
   },
   setup() {
     return;
   },
-  methods: {},
+  methods: {
+    // saveCart() {
+    //   localStorage.setItem("lastCart", JSON.stringify(this.cart));
+    // },
+    getCart() {
+      this.cart = JSON.parse(localStorage.getItem("lastCart")!);
+    },
+    // addToCart() {
+    //   this.getCart();
+    //   this.cart.push(this.item);
+    //   this.saveCart();
+    // },
+  },
 });
 </script>
 
@@ -166,3 +190,7 @@ export default defineComponent({
   color: white;
 }
 </style>
+
+function getCart() { throw new Error("Function not implemented."); } function
+getCart(): { id: number; name: string; price: number; category: string;
+description: string; }[] { throw new Error("Function not implemented."); }

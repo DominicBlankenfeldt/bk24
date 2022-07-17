@@ -66,7 +66,9 @@
         </div>
       </div>
       <div class="btn btn-config my-4" style="width: 15vw; font-size: 3vh">
-        <router-link to="/service" style="text-decoration: none; color: white"
+        <router-link
+          to="/konfigurator"
+          style="text-decoration: none; color: white"
           >Zum Konfigurator</router-link
         >
       </div>

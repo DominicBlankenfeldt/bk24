@@ -7,6 +7,8 @@ import Extras from "../views/Extras.vue";
 import Baustoffe from "../views/Baustoffe.vue";
 import Datenschutz from "../views/Datenschutz.vue";
 import Impressum from "../views/Impressum.vue";
+import Konfigurator from "../views/Configurator.vue";
+import Cart from "../views/Warenkorb.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -48,6 +50,16 @@ const routes: Array<RouteRecordRaw> = [
     path: "/datenschutz",
     name: "Datenschutz",
     component: Datenschutz,
+  },
+  {
+    path: "/konfigurator",
+    name: "Konfigurator",
+    component: Konfigurator,
+  },
+  {
+    path: "/warenkorb",
+    name: "Warenkorb",
+    component: Cart,
   },
 ];
 

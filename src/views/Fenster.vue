@@ -10,74 +10,16 @@
         <div class="d-flex justify-content-center mt-4 pt-4">
           <h1>Unseren Favoriten auf einem Blick</h1>
         </div>
-        <div
-          id="carouselExampleControls"
-          class="carousel slide"
-          data-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="d-flex justify-content-evenly">
-                <card /><card /><card /><card /><card />
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="d-flex justify-content-evenly">
-                <card /><card /><card /><card /><card />
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="d-flex justify-content-evenly">
-                <card /><card /><card /><card /><card />
-              </div>
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev btn-controls"
-            type="button"
-            data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev"
-            style="width: 2%; color: black; opacity: 0.2"
-          >
-            <span aria-hidden="true">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                fill="currentColor"
-                class="bi bi-caret-left-fill"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
-                />
-              </svg>
-            </span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next btn-controls"
-            type="button"
-            data-bs-target="#carouselExampleControls"
-            data-bs-slide="next"
-            style="color: black; width: 2%; opacity: 0.2"
-          >
-            <span aria-hidden="true">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                fill="currentColor"
-                class="bi bi-caret-right-fill"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
-                />
-              </svg>
-            </span>
-            <span class="visually-hidden">Next</span>
-          </button>
+        <div class="d-flex justify-content-evenly flex-wrap">
+          <card
+            v-for="item in items"
+            :key="item.id"
+            :id="item.id"
+            :name="item.name"
+            :price="item.price"
+            :btnConfig="false"
+            :category="item.category"
+          />
         </div>
       </div>
       <CBanner />
@@ -92,6 +34,8 @@ import Card from "@/components/Card.vue";
 import CBanner from "@/components/Configbanner.vue";
 import Banner from "@/components/Banner.vue";
 import Footer from "@/components/Footer.vue";
+import Items from "@/data/testItems";
+import { Item, Manufacturer } from "@/types";
 
 export default defineComponent({
   components: {
@@ -101,7 +45,18 @@ export default defineComponent({
     Footer,
   },
   setup() {
-    return;
+    return {};
+  },
+  data() {
+    return {
+      items: Items,
+      item: {} as Item,
+    };
+  },
+  methods: {
+    addToCart(a: Item) {
+      this.item = a;
+    },
   },
 });
 </script>
